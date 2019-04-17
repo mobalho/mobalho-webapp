@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "jquery": "^3.3.1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-materialize": "^2.3.3",
+    "react-prop-types": "^0.4.0",
+    "react-qr-svg": "^2.2.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-to-ghpages": "react-scripts build && rm -rf ../mobalho.github.io/static && cp -r build/* ../mobalho.github.io/ && cd ../mobalho.github.io && git add . && git commit -m \"App build $(date --rfc-3339=seconds)\" && git push"
   },
   "eslintConfig": {
     "extends": "react-app"
